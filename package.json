@@ -1,0 +1,35 @@
+{
+  "name": "my-app-server",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node src/server.ts",
+    "dev": "nodemon --exec ts-node src/server.ts"
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      "./src/mikro-orm.config.ts",
+      "./dist/mikro-orm.config.js"
+    ]
+  },
+  "dependencies": {
+    "@types/uuid": "^8.3.0",
+    "apollo-server": "^2.17.0",
+    "class-validator": "^0.12.2",
+    "graphql": "^15.3.0",
+    "mikro-orm": "^3.6.15",
+    "reflect-metadata": "^0.1.13",
+    "sqlite3": "^5.0.0",
+    "type-graphql": "^1.0.0",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "@mikro-orm/cli": "^4.0.0-alpha.0",
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.1.1",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  }
+}
