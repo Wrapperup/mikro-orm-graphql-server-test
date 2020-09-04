@@ -17,9 +17,6 @@ const main = async () => {
     context: { em: orm.em },
   });
 
-  const user = orm.em.create(User, { userName: "testUser" });
-  await orm.em.persistAndFlush(user);
-
   apolloServer.listen().then(({ url }) => {
     console.log(`🚀  Server ready at ${url}`);
   });

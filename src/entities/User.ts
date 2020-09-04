@@ -24,8 +24,11 @@ export class User {
   createdAt = new Date();
 
   @Field()
+  @Property({ unique: true })
+  username!: string;
+
   @Property()
-  userName!: string;
+  password!: string;
 
   @Field(() => [User])
   @ManyToMany()
